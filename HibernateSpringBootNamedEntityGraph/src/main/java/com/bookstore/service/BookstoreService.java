@@ -74,4 +74,14 @@ public class BookstoreService {
             System.out.println("Author: " + book.getAuthor());
         }
     }
+
+    public void displayAllAuthors(){
+        List<Author> authors = authorRepository.getAllAuthors();
+        authors.stream().forEach(System.out::println);
+    }
+
+    public void displayAllAuthorsByName(){
+        List<Author> authors = authorRepository.findAuthorByName("Mark Janel");
+        authors.stream().forEach(System.out::println);
+    }
 }

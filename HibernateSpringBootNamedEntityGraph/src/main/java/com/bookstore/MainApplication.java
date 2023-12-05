@@ -34,6 +34,12 @@ public class MainApplication {
 
             System.out.println("\nCall BookRepository#findAll():");
             bookstoreService.displayBooksAndAuthors();
+
+            System.out.println("\nCall AuthorRepository#getAllAuthors():");
+            bookstoreService.displayAllAuthors();
+
+            System.out.println("\nCall AuthorRepository#findAuthorByName():");
+            bookstoreService.displayAllAuthorsByName();
         };
     }
 }

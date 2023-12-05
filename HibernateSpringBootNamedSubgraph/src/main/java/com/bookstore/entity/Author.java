@@ -4,15 +4,7 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
-import javax.persistence.CascadeType;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.NamedAttributeNode;
-import javax.persistence.NamedEntityGraph;
-import javax.persistence.NamedSubgraph;
-import javax.persistence.OneToMany;
+import javax.persistence.*;
 
 @Entity
 //@NamedEntityGraph(
@@ -44,7 +36,11 @@ public class Author implements Serializable {
     private Long id;
 
     private String name;
+
+    @Basic(fetch = FetchType.LAZY)
     private String genre;
+
+    @Basic(fetch = FetchType.LAZY)
     private int age;
 
     @OneToMany(cascade = CascadeType.ALL,
@@ -112,10 +108,16 @@ public class Author implements Serializable {
         this.books = books;
     }
 
+//    @Override
+//    public String toString() {
+//        return "Author{" + "id=" + id + ", name=" + name
+//                + ", genre=" + genre + ", age=" + age + '}';
+//    }
+
     @Override
     public String toString() {
         return "Author{" + "id=" + id + ", name=" + name
-                + ", genre=" + genre + ", age=" + age + '}';
+                + '}';
     }
 
 }
