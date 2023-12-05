@@ -15,18 +15,24 @@ import javax.persistence.NamedSubgraph;
 import javax.persistence.OneToMany;
 
 @Entity
+//@NamedEntityGraph(
+//        name = "author-books-publisher-graph",
+//        attributeNodes = {
+//            @NamedAttributeNode(value = "books")
+//        }
+//)
 @NamedEntityGraph(
         name = "author-books-publisher-graph",
-        attributeNodes = {            
-            @NamedAttributeNode(value = "books", subgraph = "publisher-subgraph")
+        attributeNodes = {
+                @NamedAttributeNode(value = "books", subgraph = "publisher-subgraph")
         },
         subgraphs = {
-            @NamedSubgraph(
-                    name = "publisher-subgraph",
-                    attributeNodes = {
-                        @NamedAttributeNode("publisher")
-                    }
-            )
+                @NamedSubgraph(
+                        name = "publisher-subgraph",
+                        attributeNodes = {
+                                @NamedAttributeNode("publisher")
+                        }
+                )
         }
 )
 public class Author implements Serializable {
