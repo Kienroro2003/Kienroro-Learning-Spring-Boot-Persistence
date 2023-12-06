@@ -4,6 +4,8 @@ import com.bookstore.repository.AuthorRepository;
 import com.bookstore.entity.Author;
 import com.bookstore.entity.Book;
 import java.util.List;
+import java.util.Set;
+
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -17,30 +19,38 @@ public class BookstoreService {
         this.authorRepository = authorRepository;
     }
 
+    private void displayBooks(Set<Book> books){
+        books.stream().forEach(System.out::println);
+    }
+
+    private void displayBooks(List<Book> books){
+        books.stream().forEach(System.out::println);
+    }
+
     @Transactional(readOnly = true)
     public void fetchAuthorWithAllBooks() {
 
         Author author = authorRepository.findById(1L).orElseThrow();
         List<Book> books = author.getBooks();
 
-        System.out.println(books);
+        displayBooks(books);
     }
 
     @Transactional(readOnly = true)
     public void fetchAuthorWithCheapBooks() {
 
         Author author = authorRepository.findById(1L).orElseThrow();
-        List<Book> books = author.getCheapBooks();
+        Set<Book> books = author.getCheapBooks();
 
-        System.out.println(books);
+        displayBooks(books);
     }
 
     @Transactional(readOnly = true)
     public void fetchAuthorWithRestOfBooks() {
 
         Author author = authorRepository.findById(1L).orElseThrow();
-        List<Book> books = author.getRestOfBooks();
+        Set<Book> books = author.getRestOfBooks();
 
-        System.out.println(books);
+        displayBooks(books);
     }
 }

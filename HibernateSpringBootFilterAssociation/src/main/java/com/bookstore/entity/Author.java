@@ -1,18 +1,19 @@
 package com.bookstore.entity;
 
 import java.io.Serializable;
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.List;
-import javax.persistence.CascadeType;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.OneToMany;
+import java.util.*;
+import javax.persistence.*;
+
 import org.hibernate.annotations.Where;
 
 @Entity
+@NamedEntityGraph(
+        name = "author-books-graph",
+        attributeNodes = {
+                @NamedAttributeNode(value = "cheapBooks"),
+                @NamedAttributeNode(value = "restOfBooks")
+        }
+)
 public class Author implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -32,12 +33,12 @@ public class Author implements Serializable {
     @OneToMany(cascade = CascadeType.ALL,
             mappedBy = "author", orphanRemoval = true)
     @Where(clause = "price <= 20")
-    private List<Book> cheapBooks = new ArrayList<>();
+    private Set<Book> cheapBooks = new HashSet<>();
 
     @OneToMany(cascade = CascadeType.ALL,
             mappedBy = "author", orphanRemoval = true)
     @Where(clause = "price > 20")
-    private List<Book> restOfBooks = new ArrayList<>();
+    private Set<Book> restOfBooks = new HashSet<>();
 
     public void addBook(Book book) {
         this.books.add(book);
@@ -92,19 +93,19 @@ public class Author implements Serializable {
         this.age = age;
     }
 
-    public List<Book> getCheapBooks() {
+    public Set<Book> getCheapBooks() {
         return cheapBooks;
     }
 
-    public void setCheapBooks(List<Book> cheapBooks) {
+    public void setCheapBooks(Set<Book> cheapBooks) {
         this.cheapBooks = cheapBooks;
     }
 
-    public List<Book> getRestOfBooks() {
+    public Set<Book> getRestOfBooks() {
         return restOfBooks;
     }
 
-    public void setRestOfBooks(List<Book> restOfBooks) {
+    public void setRestOfBooks(Set<Book> restOfBooks) {
         this.restOfBooks = restOfBooks;
     }
 
