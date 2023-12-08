@@ -6,23 +6,24 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 @Service
-public class  BookstoreService {
+public class BookstoreService {
 
     private final AuthorRepository authorRepository;
 
     public BookstoreService(AuthorRepository authorRepository) {
-
         this.authorRepository = authorRepository;
     }
 
     @Transactional
-    public void cloneAuthor() {
-        Author author = authorRepository.fetchByName("Mark Janel");
+    public void saveAndUpdateUser() {
 
-        Author authorClone = new Author(author, false);
-        authorClone.setAge(54);
-        authorClone.setName("Farell Tliop");                
+        Author author = new Author();
+        author.setName("Joana Nimar");
+        author.setGenre("History");
+        author.setAge(34);
 
-        authorRepository.save(authorClone);
+        authorRepository.save(author);
+
+        author.setAge(34);
     }
 }
