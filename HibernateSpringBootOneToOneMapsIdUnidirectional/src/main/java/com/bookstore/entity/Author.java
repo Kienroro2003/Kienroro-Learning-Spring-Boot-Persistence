@@ -1,7 +1,10 @@
 package com.bookstore.entity;
 
 import java.io.Serializable;
-import javax.persistence.*;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 
 @Entity
 public class Author implements Serializable {
@@ -15,10 +18,6 @@ public class Author implements Serializable {
     private String name;
     private String genre;
     private int age;
-
-    @OneToOne(mappedBy = "author", cascade = CascadeType.ALL,
-            fetch = FetchType.LAZY)
-    private Book book;
 
     public Long getId() {
         return id;
@@ -50,14 +49,6 @@ public class Author implements Serializable {
 
     public void setAge(int age) {
         this.age = age;
-    }
-
-    public Book getBook() {
-        return book;
-    }
-
-    public void setBook(Book book) {
-        this.book = book;
     }
 
     @Override

@@ -5,17 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9821c8ea-db49-4c5e-bfe4-516096529df4" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../HibernateSpringBootEntityGraphAttributePaths/src/main/java/com/bookstore/entity/View.java" beforeDir="false" afterPath="$PROJECT_DIR$/../HibernateSpringBootEntityGraphAttributePaths/src/main/java/com/bookstore/entity/View.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../HibernateSpringBootNamedEntityGraph/src/main/java/com/bookstore/MainApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/../HibernateSpringBootNamedEntityGraph/src/main/java/com/bookstore/MainApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../HibernateSpringBootNamedEntityGraph/src/main/java/com/bookstore/repository/AuthorRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../HibernateSpringBootNamedEntityGraph/src/main/java/com/bookstore/repository/AuthorRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../HibernateSpringBootNamedEntityGraph/src/main/java/com/bookstore/service/BookstoreService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../HibernateSpringBootNamedEntityGraph/src/main/java/com/bookstore/service/BookstoreService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../HibernateSpringBootNamedEntityGraph/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../HibernateSpringBootNamedEntityGraph/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../HibernateSpringBootNamedEntityGraph/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../HibernateSpringBootNamedEntityGraph/target/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../HibernateSpringBootNamedEntityGraph/target/classes/com/bookstore/MainApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/../HibernateSpringBootNamedEntityGraph/target/classes/com/bookstore/MainApplication.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../HibernateSpringBootNamedEntityGraph/target/classes/com/bookstore/repository/AuthorRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/../HibernateSpringBootNamedEntityGraph/target/classes/com/bookstore/repository/AuthorRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../HibernateSpringBootNamedEntityGraph/target/classes/com/bookstore/service/BookstoreService.class" beforeDir="false" afterPath="$PROJECT_DIR$/../HibernateSpringBootNamedEntityGraph/target/classes/com/bookstore/service/BookstoreService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bookstore/entity/Author.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bookstore/entity/Author.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HibernateSpringBootOneToOneMapsId/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../HibernateSpringBootOneToOneMapsId/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HibernateSpringBootOneToOneMapsId/src/main/java/com/bookstore/MainApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/../HibernateSpringBootOneToOneMapsId/src/main/java/com/bookstore/MainApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HibernateSpringBootOneToOneMapsId/src/main/java/com/bookstore/entity/Author.java" beforeDir="false" afterPath="$PROJECT_DIR$/../HibernateSpringBootOneToOneMapsId/src/main/java/com/bookstore/entity/Author.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HibernateSpringBootOneToOneMapsId/src/main/java/com/bookstore/entity/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/../HibernateSpringBootOneToOneMapsId/src/main/java/com/bookstore/entity/Book.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HibernateSpringBootOneToOneMapsId/src/main/java/com/bookstore/repository/BookRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../HibernateSpringBootOneToOneMapsId/src/main/java/com/bookstore/repository/BookRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HibernateSpringBootOneToOneMapsId/src/main/java/com/bookstore/service/BookstoreService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../HibernateSpringBootOneToOneMapsId/src/main/java/com/bookstore/service/BookstoreService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HibernateSpringBootOneToOneMapsId/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../HibernateSpringBootOneToOneMapsId/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HibernateSpringBootOneToOneMapsId/src/main/resources/data-mysql.sql" beforeDir="false" afterPath="$PROJECT_DIR$/../HibernateSpringBootOneToOneMapsId/src/main/resources/data-mysql.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,7 +80,10 @@
       <workItem from="1701757249867" duration="881000" />
       <workItem from="1701775480735" duration="98000" />
       <workItem from="1701787720311" duration="2886000" />
-      <workItem from="1701805467098" duration="2821000" />
+      <workItem from="1701805467098" duration="6092000" />
+      <workItem from="1701866399775" duration="1211000" />
+      <workItem from="1701888364320" duration="1255000" />
+      <workItem from="1701930220275" duration="607000" />
     </task>
     <servers />
   </component>

@@ -23,7 +23,7 @@ public class BookstoreService {
     @Transactional
     public void newBookOfAuthor() {
 
-        Author author = authorRepository.findById(2L).orElseThrow();
+        Author author = authorRepository.findById(1L).orElseThrow();
 
         Book book = new Book();
         book.setTitle("A History of Ancient Prague");
@@ -38,7 +38,7 @@ public class BookstoreService {
     @Transactional(readOnly = true)
     public Book fetchBookByAuthorId() {
 
-        Author author = authorRepository.findById(2L).orElseThrow();
+        Author author = authorRepository.findById(1L).orElseThrow();
 
 //        return bookRepository.findById(author.getId()).orElseThrow();
         return bookRepository.fetchBookByAuthor(author);

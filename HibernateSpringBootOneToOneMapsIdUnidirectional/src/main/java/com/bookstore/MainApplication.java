@@ -21,7 +21,6 @@ public class MainApplication {
     @Bean
     public ApplicationRunner init() {
         return args -> {
-            System.out.println("\nCall AuthorRepository#findById():");
             bookstoreService.newBookOfAuthor();
 
             System.out.println("\nCall BookRepository#fetchBookByAuthor():");
