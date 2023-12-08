@@ -10,10 +10,11 @@ public class JustOneOfManyValidator implements ConstraintValidator<JustOneOfMany
 
     @Override
     public boolean isValid(Review review, ConstraintValidatorContext ctx) {
-
-        return Stream.of(review.getBook(), review.getArticle(), review.getMagazine())
+        long count = Stream.of(review.getBook(), review.getArticle(), review.getMagazine())
                 .filter(Objects::nonNull)
-                .count() == 1;
+                .count();
+
+        return count == 1;
     }
 
 }
