@@ -1,10 +1,10 @@
 package com.bookstore.entity;
 
-import com.bookstore.converter.BooleanConverter;
-
 import java.io.Serializable;
-import javax.persistence.*;
-import javax.validation.constraints.NotNull;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 
 @Entity
 public class Author implements Serializable {
@@ -18,10 +18,6 @@ public class Author implements Serializable {
     private int age;
     private String name;
     private String genre;
-
-    @Convert(converter = BooleanConverter.class)
-    @NotNull
-    private Boolean bestSelling;
 
     public Long getId() {
         return id;
@@ -55,19 +51,9 @@ public class Author implements Serializable {
         this.age = age;
     }
 
-    public Boolean isBestSelling() {
-        return bestSelling;
-    }
-
-    public void setBestSelling(Boolean bestSelling) {
-        this.bestSelling = bestSelling;
-    }
-
     @Override
     public String toString() {
         return "Author{" + "id=" + id + ", age=" + age
-                + ", name=" + name + ", genre=" + genre
-                + ", bestSelling=" + bestSelling + '}';
+                + ", name=" + name + ", genre=" + genre + '}';
     }
-
 }
