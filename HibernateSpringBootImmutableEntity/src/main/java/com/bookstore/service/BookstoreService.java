@@ -34,6 +34,7 @@ public class BookstoreService {
     public void updateAuthor() {
         Author author = authorRepository.findById(1L).orElseThrow();
         author.setAge(45);
+        authorRepository.save(author);
     }
 
     public void deleteAuthor() {

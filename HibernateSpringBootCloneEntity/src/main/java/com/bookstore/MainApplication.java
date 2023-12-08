@@ -22,19 +22,7 @@ public class MainApplication {
     @Bean
     public ApplicationRunner init() {
         return args -> {
-            System.out.println("Create new author ...");
-            bookstoreService.newAuthor();
-
-            System.out.println("Update author (should not work) ...");
-            bookstoreService.updateAuthor();
-            
-            System.out.println("Fetch the created author ...");
-            bookstoreService.fetchAuthor();
-            
-
-//
-//            System.out.println("Delete the author ...");
-//            bookstoreService.deleteAuthor();
+            bookstoreService.cloneAuthor();
         };
     }
 }
