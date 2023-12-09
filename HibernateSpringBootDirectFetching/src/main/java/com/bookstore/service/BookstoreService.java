@@ -5,6 +5,7 @@ import com.bookstore.entity.Author;
 import com.bookstore.repository.AuthorRepository;
 import java.util.Optional;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 @Service
 public class BookstoreService {
@@ -16,6 +17,9 @@ public class BookstoreService {
         this.authorRepository = authorRepository;
         this.dao = dao;
     }
+
+//    @Transactional(readOnly=true)
+    @Transactional
 
     public void directFetching() {
         // direct fetching via Spring Data
@@ -29,5 +33,8 @@ public class BookstoreService {
         // direct fetching via Session
         Optional<Author> resultHS = dao.findViaSession(Author.class, 1L);
         System.out.println("Direct fetching via Session result: " + resultHS.get());
+
+//        Optional<Author> resultSD1 = authorRepository.findById(1L);
+//        System.out.println("Direct fetching via Spring Data result: " + resultSD1.get());
     }
 }
