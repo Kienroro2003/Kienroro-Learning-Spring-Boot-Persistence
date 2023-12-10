@@ -30,7 +30,7 @@ public class MainApplication {
             System.out.println("Number of authors:" + authors.size());
 
             for (AuthorNameAge author : authors) {
-                System.out.println("Author name: " + author.getName()
+                System.out.println("Author name: " + author.name()
                         + " | Age: " + author.years() + " | Rank: " + author.rank()
                         + " | Books: " + author.books());
             }

@@ -4,7 +4,9 @@ import org.springframework.beans.factory.annotation.Value;
 
 public interface AuthorNameAge {
 
-    String getName();
+//    String getName();
+    @Value("#{target.nameE}")
+    String name();
 
     @Value("#{target.age}")
     String years();
