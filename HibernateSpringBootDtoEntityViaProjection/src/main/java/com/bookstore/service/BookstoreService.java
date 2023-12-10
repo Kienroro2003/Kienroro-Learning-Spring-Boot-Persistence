@@ -26,8 +26,4 @@ public class BookstoreService {
         
         return dto;
     }
-
-    public List<BookstoreDto> getAllAuthors(){
-        List<BookstoreDto> dto = authorRepository.findAll();
-    }
 }
