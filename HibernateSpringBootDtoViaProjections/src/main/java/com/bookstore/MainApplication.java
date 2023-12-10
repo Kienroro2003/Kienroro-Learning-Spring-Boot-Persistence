@@ -1,6 +1,6 @@
 package com.bookstore;
  
-import com.bookstore.repository.AuthorRepository.AuthorNameAge;
+import com.bookstore.projection.AuthorNameAge;
 import java.util.List;
 import com.bookstore.service.BookstoreService;
 import org.springframework.boot.ApplicationRunner;
@@ -30,7 +30,7 @@ public class MainApplication {
             System.out.println("Number of authors:" + authors.size());
 
             for (AuthorNameAge author : authors) {
-                System.out.println("Author name: " + author.getName()
+                System.out.println("Author name: " + author.getName() 
                         + " | Age: " + author.getAge());
             }
         };
