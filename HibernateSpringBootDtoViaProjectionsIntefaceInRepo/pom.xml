@@ -2,26 +2,26 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-
+ 
     <groupId>com.jpa</groupId>
-    <artifactId>HibernateSpringBootAttributeLazyLoadingDefaultValues</artifactId>
+    <artifactId>HibernateSpringBootDtoViaProjectionsIntefaceInRepo</artifactId>
     <version>1.0</version>
     <packaging>jar</packaging>
 
-    <name>HibernateSpringBootAttributeLazyLoadingDefaultValues</name>
+    <name>HibernateSpringBootDtoViaProjectionsIntefaceInRepo</name>
     <description>JPA project for Spring Boot</description>
 
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.2.2.RELEASE</version>
+        <version>2.1.4.RELEASE</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <java.version>12</java.version>                
+        <java.version>1.8</java.version>                
     </properties>
 
     <dependencies>
@@ -46,7 +46,7 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
-        </dependency>        
+        </dependency>
     </dependencies>
 
     <build>
@@ -55,25 +55,6 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
-            <plugin>
-                <groupId>org.hibernate.orm.tooling</groupId>
-                <artifactId>hibernate-enhance-maven-plugin</artifactId>
-                <version>4.2.9.Final</version>
-                <executions> 
-                    <execution> 
-                        <configuration>
-                            <failOnError>true</failOnError>
-                            <enableLazyInitialization>true</enableLazyInitialization>
-                            <enableDirtyTracking>true</enableDirtyTracking>
-                            <enableAssociationManagement>true</enableAssociationManagement>
-                        </configuration> 
-                        <goals> 
-                            <goal>enhance</goal> 
-                        </goals> 
-                    </execution> 
-                </executions> 
-            </plugin>
         </plugins>
     </build>
-    
 </project>

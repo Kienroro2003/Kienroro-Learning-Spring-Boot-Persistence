@@ -1,29 +1,19 @@
 package com.bookstore.entity;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.annotation.JsonInclude;
-import com.fasterxml.jackson.annotation.JsonInclude.Include;
-import org.springframework.data.annotation.Transient;
-
 import java.io.Serializable;
-import javax.persistence.Basic;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.Lob;
 
 @Entity
-@JsonInclude(Include.NON_DEFAULT)
 public class Author implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
-    @Lob
-    @Basic(fetch = FetchType.LAZY)
-    private byte[] avatar;
 
     private int age;
     private String name;
@@ -35,14 +25,6 @@ public class Author implements Serializable {
 
     public void setId(Long id) {
         this.id = id;
-    }
-
-    public byte[] getAvatar() {
-        return avatar;
-    }
-
-    public void setAvatar(byte[] avatar) {
-        this.avatar = avatar;
     }
 
     public String getName() {
@@ -71,6 +53,7 @@ public class Author implements Serializable {
 
     @Override
     public String toString() {
-        return "Author{" + "name=" + name + "}";
+        return "Author{" + "id=" + id + ", age=" + age
+                + ", name=" + name + ", genre=" + genre + '}';
     }
 }
