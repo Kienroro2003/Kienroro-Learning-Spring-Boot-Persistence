@@ -22,12 +22,8 @@ public class BookstoreService {
         
         // the fetched Author are managed by Hibernate
         // the following line of code will trigger an UPDATE
-        dto.get(0).getAuthor().setGenre("Poetry");        
+        // dto.get(0).getAuthor().setAge(47);
         
         return dto;
-    }
-
-    public List<BookstoreDto> getAllAuthors(){
-        List<BookstoreDto> dto = authorRepository.findAll();
     }
 }
