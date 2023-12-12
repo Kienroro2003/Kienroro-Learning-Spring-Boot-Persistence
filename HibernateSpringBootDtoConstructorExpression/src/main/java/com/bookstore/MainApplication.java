@@ -24,26 +24,12 @@ public class MainApplication {
     @Bean
     public ApplicationRunner init() {
         return args -> {
-            System.out.println("\n\n Fetch authors by Genre:");
-            System.out.println("-----------------------------------------------------------------------------");
 
-            List<AuthorDto> authors = bookstoreService.fetchByGenre();
+            List<AuthorDto> authors = bookstoreService.fetchAuthors();
 
             System.out.println("Number of authors:" + authors.size());
 
             for (AuthorDto author : authors) {
-                System.out.println("Author name: " + author.getName()
-                        + " | Age: " + author.getAge());
-            }
-
-            System.out.println("\n\n Fetch all Authors:");
-            System.out.println("-----------------------------------------------------------------------------");
-
-            List<AuthorDto> allAuthors = bookstoreService.fetchAllAuthors();
-
-            System.out.println("Number of authors:" + allAuthors.size());
-
-            for (AuthorDto author : allAuthors) {
                 System.out.println("Author name: " + author.getName()
                         + " | Age: " + author.getAge());
             }

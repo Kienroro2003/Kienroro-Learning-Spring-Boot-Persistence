@@ -8,17 +8,10 @@ public class AuthorDto implements Serializable {
 
     private final String name;
     private final int age;
-    private String genre;
 
     public AuthorDto(String name, int age) {
         this.name = name;
         this.age = age;
-    }
-
-    public AuthorDto(String name, int age, String genre) {
-        this.name = name;
-        this.age = age;
-        this.genre = genre;
     }
 
     public String getName() {

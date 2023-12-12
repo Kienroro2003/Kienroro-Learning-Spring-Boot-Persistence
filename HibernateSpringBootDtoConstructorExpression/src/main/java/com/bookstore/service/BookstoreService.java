@@ -14,12 +14,7 @@ public class BookstoreService {
         this.authorRepository = authorRepository;
     }
 
-    public List<AuthorDto> fetchByGenre() {
-
-        return authorRepository.findByGenre("Anthology");
-    }
-
-    public List<AuthorDto> fetchAllAuthors() {
+    public List<AuthorDto> fetchAuthors() {
 
         return authorRepository.fetchAuthors();
     }
