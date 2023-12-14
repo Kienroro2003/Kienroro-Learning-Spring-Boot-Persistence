@@ -19,7 +19,7 @@ public class AuthorDaoImpl implements AuthorDao {
     public List<AuthorDto> fetchNameAndAge() {
 
         Query query = entityManager.createNativeQuery(
-                "SELECT name, age FROM author", "AuthorDtoMapping");
+                "SELECT name, genre FROM author", "AuthorDtoMapping");
         List<AuthorDto> authors = query.getResultList();
 
         return authors;

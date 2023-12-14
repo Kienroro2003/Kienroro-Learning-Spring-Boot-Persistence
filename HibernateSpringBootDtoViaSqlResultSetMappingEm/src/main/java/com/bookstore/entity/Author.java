@@ -16,7 +16,7 @@ import javax.persistence.SqlResultSetMapping;
                     targetClass = AuthorDto.class,
                     columns = {
                         @ColumnResult(name = "name"),
-                        @ColumnResult(name = "age")
+                        @ColumnResult(name = "genre")
                     }
             )}
 )

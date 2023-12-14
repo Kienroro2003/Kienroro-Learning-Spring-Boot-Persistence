@@ -30,8 +30,10 @@ public class MainApplication {
             System.out.println("Number of authors:" + authors.size());
 
             for (AuthorDto author : authors) {
-                System.out.println("Author name: " + author.getName() 
-                        + " | Age: " + author.getAge());
+//                System.out.println("Author name: " + author.getName()
+//                        + " | Age: " + author.getGenre());
+                System.out.println("Author name: " + author.getName()
+                        + " | Genre: " + author.getGenre());
             }
         };
     }

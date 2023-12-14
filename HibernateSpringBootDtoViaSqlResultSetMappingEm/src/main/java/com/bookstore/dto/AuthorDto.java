@@ -7,18 +7,19 @@ public class AuthorDto implements Serializable {
     private static final long serialVersionUID = 1L;
 
     private final String name;
-    private final int age;
+//    private final int age;
+    private final String genre;
 
-    public AuthorDto(String name, int age) {
+    public AuthorDto(String name, String genre) {
         this.name = name;
-        this.age = age;
+        this.genre = genre;
     }
 
     public String getName() {
         return name;
     }
 
-    public int getAge() {
-        return age;
+    public String getGenre() {
+        return genre;
     }
 }
