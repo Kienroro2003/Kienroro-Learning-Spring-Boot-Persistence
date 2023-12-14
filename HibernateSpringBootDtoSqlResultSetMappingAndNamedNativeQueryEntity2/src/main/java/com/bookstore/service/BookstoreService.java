@@ -1,6 +1,6 @@
 package com.bookstore.service;
 
-import com.bookstore.dto.AuthorDto;
+import com.bookstore.entity.Author;
 import java.util.List;
 import com.bookstore.repository.AuthorRepository;
 import org.springframework.stereotype.Service;
@@ -14,13 +14,13 @@ public class BookstoreService {
         this.authorRepository = authorRepository;
     }
 
-//    public List<AuthorDto> fetchAuthorsNamesAndAges() {
-//
-//        return authorRepository.fetchNameAndAge();
-//    }
-    
-    public List<String> fetchAuthorsNames() {
+    public List<Author> fetchAuthors() {
 
-        return authorRepository.fetchName();
+        return authorRepository.fetchAll();
+    }
+
+    public List<Object[]> fetchAuthorWithBook() {
+        
+        return authorRepository.fetchWithBook();
     }
 }

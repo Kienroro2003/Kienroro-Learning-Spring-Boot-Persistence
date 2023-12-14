@@ -1,8 +1,9 @@
 package com.bookstore;
 
-import com.bookstore.dto.AuthorDto;
+import com.bookstore.entity.Author;
 import java.util.List;
 import com.bookstore.service.BookstoreService;
+import java.util.Arrays;
 import org.springframework.boot.ApplicationRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -25,22 +26,13 @@ public class MainApplication {
     public ApplicationRunner init() {
         return args -> {
 
-//            List<AuthorDto> authors = bookstoreService.fetchAuthorsNamesAndAges();
-//
-//            System.out.println("Number of authors:" + authors.size());
-//
-//            for (AuthorDto author : authors) {
-//                System.out.println("Author name: " + author.getName()
-//                        + " | Age: " + author.getAge());
-//            }
-//
-//            System.out.println("============================================");
+            List<Author> authors = bookstoreService.fetchAuthors();
+            System.out.println(authors);
             
-            List<String> names = bookstoreService.fetchAuthorsNames();
+            System.out.println("==========================================");
 
-            System.out.println("Number of items:" + names.size());
-
-            System.out.println(names);
+            List<Object[]> authorsArray = bookstoreService.fetchAuthorWithBook();
+            authorsArray.forEach(a -> System.out.println(Arrays.toString(a)));
         };
     }
 }

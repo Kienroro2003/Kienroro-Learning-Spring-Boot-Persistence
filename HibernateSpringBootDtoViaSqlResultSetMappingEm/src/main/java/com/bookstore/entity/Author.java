@@ -8,37 +8,18 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.NamedNativeQuery;
 import javax.persistence.SqlResultSetMapping;
 
-// Scalar Mapping
-@SqlResultSetMapping(
-        name = "AuthorsNameMapping",
-        columns = {
-            @ColumnResult(name = "name")
-        }
+@SqlResultSetMapping(name = "AuthorDtoMapping",
+        classes = {
+            @ConstructorResult(
+                    targetClass = AuthorDto.class,
+                    columns = {
+                        @ColumnResult(name = "name"),
+                        @ColumnResult(name = "age")
+                    }
+            )}
 )
-@NamedNativeQuery(
-        name = "AuthorsNameQuery",
-        query = "SELECT name FROM author",
-        resultSetMapping = "AuthorsNameMapping"
-)
-// Constructor Mapping
-//@NamedNativeQuery(
-//        name = "AuthorDtoQuery",
-//        query = "SELECT name, age FROM author",
-//        resultSetMapping = "AuthorDtoMapping"
-//)
-//@SqlResultSetMapping(
-//        name = "AuthorDtoMapping",
-//        classes = @ConstructorResult(
-//                targetClass = AuthorDto.class,
-//                columns = {
-//                    @ColumnResult(name = "name"),
-//                    @ColumnResult(name = "age")
-//                }
-//        )
-//)
 @Entity
 public class Author implements Serializable {
 
